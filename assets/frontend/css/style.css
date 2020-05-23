@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+.post-grid-search{
+    margin: 0 0 20px 0;
+}
+
+.post-grid-search .field-wrap{
+    width: 33%;
+    display: inline-block;
+    margin: 20px 0;
+    padding: 0;
+}
+
+
+.post-grid-search .field-wrap.submit{
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+}
+
+.post-grid-search input[type="text"],
+.post-grid-search input[type="search"],
+.post-grid-search input[type="number"],
+.post-grid-search input[type="email"],
+.post-grid-search input[type="text"],
+.post-grid-search select,
+.post-grid-search textarea{
+    width: 85%;
+}
+.post-grid-search input[type="submit"]{
+    width: 250px;
+    /* padding: 10px; */
+    font-size: 16px;
+}
+
+
+.post-grid-search .field-wrap:last-child{
+
+}
+
+
+
+.post-grid-search .field-wrap .field-label{
+    font-size: 14px;
+    word-break: break-word;
+}
+.post-grid-search .field-wrap .field-input{
+}
+.post-grid-search .field-wrap .description{
+    word-break: break-word;
+    display: none;
+}
+
+.post-grid-search .field-wrap .field-wrap{
+    padding: 0 15px 15px 0px;
+}
+.post-grid-search .field-wrap .field-wrap .field-lable{
+
+    float: none;
+}
