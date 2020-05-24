@@ -9,4 +9,4 @@ https://wordpress.org/plugins/post-grid/
 
 **Output**
 
-![](https://i.imgur.com/GUJOT21.png "Screenshot")
+![](https://i.imgur.com/7CA8KvR.png "Screenshot")
