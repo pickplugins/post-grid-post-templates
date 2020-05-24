@@ -11,6 +11,33 @@ if ( ! defined('ABSPATH')) exit;  // if direct access
 
 
 
+add_filter('post_grid_post_options_tabs', 'post_grid_pt_post_options_tabs');
+
+
+function post_grid_pt_post_options_tabs($tabs){
+
+    global $post;
+
+    $post_id = $post->ID;
+    $post_grid_post_settings = get_post_meta($post_id, 'post_grid_post_settings', true);
+
+
+    $post_grid_settings_tab = array();
+    $current_tab = isset($post_grid_post_settings['current_tab']) ? $post_grid_post_settings['current_tab'] : 'options';
+
+
+    $tabs[] = array(
+        'id' => 'post_template',
+        'title' => sprintf(__('%s Post template','post-grid'), '<i class="fas fa-newspaper"></i>'),
+        'priority' => 2,
+        'active' => ($current_tab == 'post_template') ? true : false,
+
+    );
+
+
+    return $tabs;
+
+}
 
 
 add_action('post_grid_post_options_content_post_template', 'post_grid_post_options_content_post_template',10, 2);
@@ -34,39 +61,39 @@ function post_grid_post_options_content_post_template($tab, $post_id){
         <?php
 
 
-
-        $args = array(
-            'id'		=> 'remove_post_title',
-            'parent'		=> 'post_grid_post_settings',
-            'title'		=> __('Remove post title','post-grid'),
-            'details'	=> __('Remove default post title from single post template.','post-grid'),
-            'type'		=> 'radio',
-            'value'		=> $remove_post_title,
-            'default'		=> 'no',
-            'args'		=> array(
-                'yes'=>__('Yes','post-grid'),
-                'no'=>__('No','post-grid'),
-            ),
-        );
-
-        $settings_tabs_field->generate_field($args, $post_id);
-
-        $args = array(
-            'id'		=> 'remove_post_thumbnail',
-            'parent'		=> 'post_grid_post_settings',
-            'title'		=> __('Remove post thumbnail','post-grid'),
-            'details'	=> __('Remove default post thumbnail from single post template.','post-grid'),
-            'type'		=> 'radio',
-            'value'		=> $remove_post_thumbnail,
-            'default'		=> 'no',
-            'args'		=> array(
-                'yes'=>__('Yes','post-grid'),
-                'no'=>__('No','post-grid'),
-            ),
-        );
-
-        $settings_tabs_field->generate_field($args, $post_id);
-
+//
+//        $args = array(
+//            'id'		=> 'remove_post_title',
+//            'parent'		=> 'post_grid_post_settings',
+//            'title'		=> __('Remove post title','post-grid'),
+//            'details'	=> __('Remove default post title from single post template.','post-grid'),
+//            'type'		=> 'radio',
+//            'value'		=> $remove_post_title,
+//            'default'		=> 'no',
+//            'args'		=> array(
+//                'yes'=>__('Yes','post-grid'),
+//                'no'=>__('No','post-grid'),
+//            ),
+//        );
+//
+//        $settings_tabs_field->generate_field($args, $post_id);
+//
+//        $args = array(
+//            'id'		=> 'remove_post_thumbnail',
+//            'parent'		=> 'post_grid_post_settings',
+//            'title'		=> __('Remove post thumbnail','post-grid'),
+//            'details'	=> __('Remove default post thumbnail from single post template.','post-grid'),
+//            'type'		=> 'radio',
+//            'value'		=> $remove_post_thumbnail,
+//            'default'		=> 'no',
+//            'args'		=> array(
+//                'yes'=>__('Yes','post-grid'),
+//                'no'=>__('No','post-grid'),
+//            ),
+//        );
+//
+//        $settings_tabs_field->generate_field($args, $post_id);
+//
 
 
 

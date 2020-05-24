@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Post Grid Page Templates by PickPlugins
+Plugin Name: Post Grid Post Templates by PickPlugins
 Plugin URI: https://www.pickplugins.com/item/post-grid-create-awesome-grid-from-any-post-type-for-wordpress/
 Description: Awesome post grid for query post from any post type and display on grid.
 Version: 3.2.20
