@@ -12,3 +12,4 @@ Please check this file to customize input fields and process input form data.
 **Output**
 
 ![](https://i.imgur.com/oTDnnB6.png "Screenshot")
+![](https://i.imgur.com/XfUoybI.png "Screenshot")
